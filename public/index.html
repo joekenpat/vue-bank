@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title>VUETRIFY</title>
+    <style>
+      @-webkit-keyframes rotate {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes rotate {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        50% {
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes rotate2 {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          border-top-color: rgba(0, 0, 0, 0.5);
+        }
+        50% {
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+          border-top-color: rgba(0, 0, 255, 0.5);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+          border-top-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+      @keyframes rotate2 {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          border-top-color: rgba(0, 0, 0, 0.5);
+        }
+        50% {
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+          border-top-color: rgba(0, 0, 255, 0.5);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+          border-top-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .loader {
+        position: fixed;
+        margin: 75px auto;
+        display: block;
+        overflow: hidden;
+        top: 150px;
+        left: 110px;
+      }
+      .loader div {
+        height: 100%;
+      }
+
+      /* loader 1 */
+      .loader1,
+      .loader1 div {
+        border-radius: 50%;
+        padding: 8px;
+        border: 2px solid transparent;
+        -webkit-animation: rotate linear 3.5s infinite;
+        animation: rotate linear 3.5s infinite;
+        border-top-color: rgba(0, 0, 0, 0.5);
+        border-bottom-color: rgba(0, 0, 255, 0.5);
+      }
+
+      /*loader 2  */
+      .loader2,
+      .loader2 div {
+        border-radius: 50%;
+        padding: 8px;
+        border: 2px solid transparent;
+        -webkit-animation: rotate linear 3.5s infinite;
+        animation: rotate linear 3.5s infinite;
+        border-top-color: rgba(0, 0, 255, 0.5);
+        border-left-color: rgba(0, 0, 0, 0.5);
+        border-right-color: rgba(0, 0, 0, 0.5);
+      }
+
+      /*loader 3  */
+      .loader3,
+      .loader3 div {
+        border-radius: 50%;
+        padding: 8px;
+        border: 2px solid transparent;
+        -webkit-animation: rotate linear 3.5s infinite;
+        animation: rotate linear 3.5s infinite;
+        border-top-color: rgba(0, 0, 0, 0.5);
+        border-left-color: rgba(0, 0, 255, 0.5);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.38, 0.21, 0.88);
+        animation-timing-function: cubic-bezier(0.55, 0.38, 0.21, 0.88);
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+      }
+
+      /* loader 4 */
+      .loader4,
+      .loader4 div {
+        border-radius: 50%;
+        padding: 8px;
+        border: 2px solid transparent;
+        -webkit-animation: rotate linear 3.5s infinite;
+        animation: rotate linear 3.5s infinite;
+        border-radius: 50%;
+        padding: 4px;
+        -webkit-animation: rotate2 4s infinite linear;
+        animation: rotate2 4s infinite linear;
+      }
+
+      div:hover {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+      .loader,
+      .loader * {
+        will-change: transform;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but VUETRIFY doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app">
+      <div id="loader_wrapper">
+        <div class="loader loader4">
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
